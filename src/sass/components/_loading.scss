@@ -1,0 +1,60 @@
+.loading {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-top: 15%;
+  right: -50%;
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__circle,
+  &__cỉrcle-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid $main-color;
+    border-radius: 100rem;
+  }
+
+  &__circle {
+    width: 100px;
+    height: 100px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    animation: spinner1 1.2s ease-in-out infinite;
+
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__cỉrcle-small {
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    animation: spinner2 1.2s ease-in-out infinite;
+
+    @include mobile {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @keyframes spinner1 {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes spinner2 {
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+}

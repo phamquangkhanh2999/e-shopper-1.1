@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixins";
+@import "./base";
+
+// import components
+//@import "components/loading";
+
+@import "components/header";
+@import "components/menu";
+@import "components/footer";
+@import "components/button";
+@import "components/hero-slider";
+@import "components/section";
+@import "components/product-cart";
+@import "components/policy-card";
+@import "components/checkbox";
+@import "components/catalog";
+@import "components/product-view";
+@import "components/cart";
+@import "components/payment";
+@import "components/pagination";
+@import "components/login";

@@ -1,0 +1,83 @@
+.payment {
+  @include flex(flex-start, space-between);
+  @include tablet {
+    flex-direction: column;
+  }
+  &__form,
+  &__details {
+    border: 1px solid $txt-main-color;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    background-color: $main-color-2;
+  }
+  &__form {
+    width: 50%;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: $main-icon;
+      margin-left: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      input,
+      select,
+      textarea {
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 1rem;
+        border: 1px solid $main-icon;
+
+        &:focus {
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid $main-color;
+        }
+      }
+    }
+    &__message {
+      color: red;
+    }
+  }
+
+  &__details {
+    width: 45%;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: $main-icon;
+    }
+
+    &__list {
+      // @include flex(flex-start, flex-start);
+      &__item {
+        @include flex(flex-start, space-between);
+        padding: 1rem 0;
+
+        // &:nth-child(2n) {
+        //
+        // }
+        &__left,
+        &__right {
+          color: $txt-main-color;
+          font-size: 1.1rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+.borde-item {
+  border-top: 2px dashed $txt-main-color;
+}

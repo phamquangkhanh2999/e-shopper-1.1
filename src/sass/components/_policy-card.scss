@@ -1,0 +1,35 @@
+.policy-card {
+  @include flex(center, flex-start);
+  padding: 25px;
+  padding-left: 0;
+  box-shadow: $box-shadow;
+  transition: transform 0.5s ease;
+  width: 98%;
+
+  &:hover {
+    transform: translateY(-20px);
+  }
+
+  &__icon {
+    @include flex(center, center);
+    width: 10%;
+    color: $main-color;
+    margin: 0 1rem;
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    &__name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: $txt-second-color;
+    }
+  }
+}
