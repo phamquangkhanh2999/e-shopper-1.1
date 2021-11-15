@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
   username: yup.string().required("Vui lòng nhập họ tên"),
@@ -153,9 +154,11 @@ const Payment = () => {
                   Thanh toán tiền mặt khi nhận hàng (COD)
                 </label>
               </div>
-              <Button onSubmit={handleSubmit(onSubmit)} size='block'>
-                Thanh Toán
-              </Button>
+              <Link to='/order-complete'>
+                <Button onSubmit={handleSubmit(onSubmit)} size='block'>
+                  Thanh Toán
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

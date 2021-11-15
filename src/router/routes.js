@@ -4,6 +4,7 @@ import Product from "../pages/Product";
 import Catalog from "../pages/Catalog";
 import Payment from "../components/Payment";
 import Login from "../pages/Login";
+import OrderComplete from "../components/OrderComplete";
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: "/payment",
     exact: false,
     element: <Payment />,
+  },
+  {
+    path: "/order-complete",
+    exact: false,
+    element: <OrderComplete />,
   },
 ];
 

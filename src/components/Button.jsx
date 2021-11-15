@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Button = (props) => {
-  console.log(props.bg);
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
   const size = props.size ? "btn-" + props.size : "";
   const animate = props.animate ? "btn-animate" : "";
